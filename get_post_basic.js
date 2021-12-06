@@ -28,7 +28,7 @@ app.post("/students/:rollNo",(req,res) =>{
     const {rollNo}  = req.params;
     const {name} = req.body;
     if(!rollNo){
-        res.status(418).send({message : "we need human students for  the school!!"})
+        res.status(418).send({message : "we need students for  the school!!"})
     }
     res.send({
         rollNo : `this is the student of ${rollNo} with this ${name}`

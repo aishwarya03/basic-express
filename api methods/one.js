@@ -50,7 +50,7 @@ app.put("/employee/:id", function (req, res) {
     console.log(id)
     const foundEmp = employees.find(element => element.id == id)
     if (!foundEmp) {
-        return res.status(400).send({ message: "check id", success: false})
+        return res.status(400).send({ message: "check id", success: false, data: employees})
     }
     // console.log(foundEmp.name, req.body, "linenoe55")
     foundEmp.name = req.body.name;

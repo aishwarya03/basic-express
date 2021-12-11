@@ -1,7 +1,7 @@
 // import express package which is a function to add a parenthesis to initialize it.
 const express = require ('express');
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 3000;
 app.use(express.json())
 // if you want to create a uri for the t-shirt 
 // that will automatically set our server with that endpooint,
@@ -35,6 +35,6 @@ app.post("/students/:rollNo",(req,res) =>{
     })
 })
 // fire up the api
-app.listen(8000, ()=>{
+app.listen(6050, ()=>{
     console.log(`the connection is alive on  http://localhost:${port}`)
 });

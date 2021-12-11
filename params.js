@@ -8,6 +8,7 @@ app.get('/students/:rollNo', (req, res, next) => {
 
     console.log(req.query, "query")
        let paramsObject = req.params;
+       console.log(paramsObject)
 
     Stujson.students.forEach(element => {
         if (paramsObject.rollNo == element.rollNo) {
